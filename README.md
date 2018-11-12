@@ -1,7 +1,7 @@
-# How to abort the animation for listview items?
-This example demonstrates how to abort the animation for non-visible items at runtime.
+# How to animate the listview items?
+This example demonstrates how to the animation the listview items while scrolling.
 
-See [How to abort the animation for listview items](https://www.syncfusion.com/kb/9537/how-to-abort-the-animation-for-listview-items) for more details.
+
 ## <a name="requirements-to-run-the-demo"></a>Requirements to run the demo ##
 
 * [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
