@@ -9,7 +9,7 @@ namespace Animation
     {
         #region Public Properties
 
-        public ObservableCollection<Contacts> customerDetails
+        public ObservableCollection<Contacts> CustomerDetails
         {
             get;
             set;
@@ -36,9 +36,9 @@ namespace Animation
 
         private void GetContactDetails(int count)
         {
-            customerDetails = new ObservableCollection<Contacts>();
+            CustomerDetails = new ObservableCollection<Contacts>();
 
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < CustomerNames.Length-1; i++)
             {
                 var details = new Contacts()
                 {
@@ -46,7 +46,7 @@ namespace Animation
                     ContactNumber = random.Next(100, 400).ToString() + "-" + random.Next(500, 800).ToString() + "-" + random.Next(1000, 2000).ToString(),
                     ContactName = CustomerNames[i],
                 };
-                customerDetails.Add(details);
+                CustomerDetails.Add(details);
             }
         }
 
