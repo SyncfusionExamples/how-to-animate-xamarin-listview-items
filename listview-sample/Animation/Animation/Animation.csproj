@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.26" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.947036" />
+  </ItemGroup>
+</Project>
