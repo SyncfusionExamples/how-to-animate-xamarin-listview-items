@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using Xamarin.Forms;
 
 namespace Animation
 {
@@ -14,7 +15,7 @@ namespace Animation
             get;
             set;
         }
-
+        public Command<object> OnTap { get; }
         #endregion
 
         #region Fields
@@ -28,6 +29,7 @@ namespace Animation
         public ContactsViewModel()
         {
             this.GetContactDetails(20);
+            OnTap = new Command<object>(OnTapped);
         }
 
         #endregion
@@ -48,6 +50,16 @@ namespace Animation
                 };
                 CustomerDetails.Add(details);
             }
+        }
+        private async void OnTapped(object obj)
+        {
+            var itemTemplateGrid = obj as Grid;
+            var item = itemTemplateGrid.BindingContext as Contacts;
+
+            itemTemplateGrid.Opacity = 0;
+            await itemTemplateGrid.FadeTo(1, 1000, Easing.SinInOut);
+
+            this.CustomerDetails.Remove(item);
         }
 
         #endregion
