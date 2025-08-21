@@ -45,6 +45,18 @@ This example demonstrates how to the animation the listview items while scrollin
             return base.OnCreateListViewItem(itemIndex, type, data);
         }
     }
+    public class ListViewItemExt : ListViewItem
+    {        
+        public ListViewItemExt()
+        {            
+        }
+        protected override void OnItemAppearing()
+        {
+           this.Opacity = 0;
+            this.FadeTo(1, 400, Easing.SinInOut);
+            base.OnItemAppearing();
+        }       
+    }
 
 listView.ItemGenerator = new ItemGeneratorExt(listView);
 ```
